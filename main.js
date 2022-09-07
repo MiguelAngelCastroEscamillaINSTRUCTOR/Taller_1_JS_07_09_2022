@@ -1,18 +1,13 @@
 addEventListener("DOMContentLoaded", ()=>{
-    // 5. Escribir un programa que calcule la longitud y el área de una circunferencia: Radio = 4
-    // Longitud de la circunferencia = 2 * PI * radio
-    // Área de la circunferencia = PI * radio˄2
+    // 6. Escribir un programa que calcule la velocidad de un proyectil que recorre 2 Km en 5 minutos. Expresar
+    // el resultado en metros/segundo. Velocidad = espacio/tiempo
 
-
-    let radio = Number(prompt("Ingrese el radio de la circunferencia", 5));
-
-
-    console.group(`%cFormula ${2} * ${Math.PI} * ${radio}`, `background: rebeccapurple; color: antiquewhite; font-family: cursive; padding: 2px; border-radius: 1px solid #925fc4; border-radius: 5px;`);
-
-        console.log(`Longitud de la circunferencia : "${2 * Math.PI * radio}"`);
-    console.groupEnd();
-
-    console.group(`%cFormula ${Math.PI} * ${Math.pow(radio, 2)}`, `background: rebeccapurple; color: antiquewhite; font-family: cursive; padding: 2px; border-radius: 1px solid #925fc4; border-radius: 5px;`);
-        console.log(`Área de la circunferencia : "${Math.PI * Math.pow(radio, 2)}"`);
-    console.groupEnd();
+    let velocidad = Number(prompt("Ingrese la velocidad del proyectil expresado en KM\n\t Ejemplo 1KM = 1000M", 2));
+    let distancia = Number(prompt("Ingrese la cantidad de minutos que recorrio el proyectil\n\t Ejemplo 1M = 60s", 5));
+    let metros = velocidad*1000;
+    let segundos = distancia*60;
+    let resultado = metros / segundos;
+    console.log(`El proyectil recicorrio ${velocidad}Km espresados en metros son ${metros}M`);
+    console.log(`La distancia recicorrio ${distancia}M espresados en segundos son ${segundos}s`);
+    console.log(`Resultado de la velocidad ${resultado}KM/s`);
 })
